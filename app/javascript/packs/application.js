@@ -10,6 +10,7 @@ require("channels")
 require("jquery")
 
 import "bootstrap"
+import "../stylesheets/custom.css.scss"
 
 
 
