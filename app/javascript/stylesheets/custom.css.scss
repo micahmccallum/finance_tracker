@@ -2,6 +2,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 
+
+
+
 .alert-alert {
   @extend .alert-danger;
   height: 3rem; 
@@ -11,3 +14,28 @@
   @extend .alert-success;
   height: 3rem;  
 }
+
+.search-area {
+  padding-top: 50px;
+}
+
+.no-right-padding {
+  padding-right: 0px;
+}
+
+.no-left-padding {
+  padding-left: 0px;
+}
+
+.no-right-corner-radius {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.no-left-corner-radius {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+ .results-block {
+   display: inline;
+ }
