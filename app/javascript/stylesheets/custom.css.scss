@@ -36,6 +36,17 @@
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
- .results-block {
+ 
+.results-block {
    display: inline;
+   margin-bottom: .5rem;
+   margin-bottom: 1rem;
  }
+
+.navbar-btn {
+  margin-right: .5rem;
+}
+
+.hidden {
+ visibility: hidden; 
+}

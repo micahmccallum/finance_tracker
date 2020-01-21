@@ -1,6 +1,5 @@
 class StocksController < ApplicationController
-  has_many :user_stocks
-  has_many :users, through: :user_stocks
+ 
 
   def search
     if params[:stock].present?
