@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <%= render 'layouts/messages' %>  
+    
+    <% if @friend %>
+      <div class="card card-header results-block">
+        <strong>Email: </strong> <%= @friend %>
+        <strong>First Name: </strong> <%= @friend %>
+        <strong>Last Name: </strong> <%= @friend %>
+       
+          <%= link_to 'Follow friend', "#", class: "btn btn-success", method: :post   %>
+        
+      </div>      
+    <% end %>
+  </div>
+</div>

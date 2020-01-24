@@ -8,21 +8,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= "active" if request.path == my_portfolio_path %>">
-            <%= link_to 'My Portfolio', my_portfolio_path, class: "nav-link" %>
-          </li>          
+            <%= link_to 'My Portfolio', my_portfolio_path, class: "nav-link" %>            
+          </li>
+          <li class="nav-item <%= "active" if request.path == my_friends_path %>">
+            
+            <%= link_to 'My Friends', my_friends_path, class: "nav-link" %>
+          </li>                   
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              My Account
+              Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">              
-              <a class="dropdown-item" href="#">Something else here</a>               
+              <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+                <%= fa_icon 'edit' %>Edit profile
+              <% end %>             
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>        
         </ul>
-        <ul class="navbar-nav ml-auto <%= "hidden" if request.path == root_path %>">
-          <li class="nav-item">            
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item user-name">
+            <%= fa_icon 'user' %> <%= current_user.full_name %>
+          </li>
+          <li class="nav-item <%= "hidden" if request.path == root_path %>">            
             <%= link_to("Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn")   %>
           </li>
         </ul>
